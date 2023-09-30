@@ -1,10 +1,10 @@
-import { Item } from 'src/item/item.entity';
+import { Coleta } from 'src/coleta/coleta.entity';
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 
 @Entity()
 export class Usuario {
   @PrimaryGeneratedColumn()
-  id_usuario: number;
+  id: number;
 
   @Column({ length: 100 })
   nome: string;
@@ -35,5 +35,8 @@ export class Usuario {
 
   @Column({ length: 255 })
   senha: string;
+
+  @OneToMany(() => Coleta, coleta => coleta.usuario)
+  coleta: Coleta[];
 
 }

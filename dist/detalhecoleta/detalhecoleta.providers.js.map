@@ -1,0 +1,1 @@
+{"version":3,"file":"detalhecoleta.providers.js","sourceRoot":"","sources":["../../src/detalhecoleta/detalhecoleta.providers.ts"],"names":[],"mappings":";;;AACA,iEAAuD;AAE1C,QAAA,sBAAsB,GAAG;IACpC;QACE,OAAO,EAAE,0BAA0B;QACnC,UAAU,EAAE,CAAC,UAAsB,EAAE,EAAE,CAAC,UAAU,CAAC,aAAa,CAAC,oCAAa,CAAC;QAC/E,MAAM,EAAE,CAAC,aAAa,CAAC;KACxB;CAEF,CAAC"}

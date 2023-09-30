@@ -1,5 +1,6 @@
+import { Coleta } from 'src/coleta/coleta.entity';
 export declare class Usuario {
-    id_usuario: number;
+    id: number;
     nome: string;
     email: string;
     telefone: string;
@@ -10,4 +11,5 @@ export declare class Usuario {
     cnpj: string;
     contrato: string;
     senha: string;
+    coleta: Coleta[];
 }

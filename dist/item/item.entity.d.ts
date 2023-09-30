@@ -1,4 +1,4 @@
 export declare class Item {
-    id_item: number;
+    id: number;
     item: string;
 }

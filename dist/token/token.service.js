@@ -50,6 +50,7 @@ let TokenService = exports.TokenService = class TokenService {
         }
     }
     async getUsuarioByToken(token) {
+        token = token.replace("Bearer ", "").trim();
         let objToken = await this.tokenRepository.findOneBy({ hash: token });
         if (objToken) {
             let usuario = await this.usuarioService.findOne(objToken.username);

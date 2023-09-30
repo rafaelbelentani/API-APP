@@ -10,13 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Usuario = void 0;
+const coleta_entity_1 = require("../coleta/coleta.entity");
 const typeorm_1 = require("typeorm");
 let Usuario = exports.Usuario = class Usuario {
 };
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
-], Usuario.prototype, "id_usuario", void 0);
+], Usuario.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)({ length: 100 }),
     __metadata("design:type", String)
@@ -57,6 +58,10 @@ __decorate([
     (0, typeorm_1.Column)({ length: 255 }),
     __metadata("design:type", String)
 ], Usuario.prototype, "senha", void 0);
+__decorate([
+    (0, typeorm_1.OneToMany)(() => coleta_entity_1.Coleta, coleta => coleta.usuario),
+    __metadata("design:type", Array)
+], Usuario.prototype, "coleta", void 0);
 exports.Usuario = Usuario = __decorate([
     (0, typeorm_1.Entity)()
 ], Usuario);

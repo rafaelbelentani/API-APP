@@ -11,15 +11,20 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const auth_module_1 = require("./auth/auth.module");
+const coleta_module_1 = require("./coleta/coleta.module");
+const jwt_1 = require("@nestjs/jwt");
+const detalhecoleta_module_1 = require("./detalhecoleta/detalhecoleta.module");
 let AppModule = exports.AppModule = class AppModule {
 };
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            auth_module_1.AuthModule
+            auth_module_1.AuthModule,
+            coleta_module_1.ColetaModule,
+            detalhecoleta_module_1.DetalheColetaModule
         ],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        providers: [app_service_1.AppService, jwt_1.JwtService],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map
